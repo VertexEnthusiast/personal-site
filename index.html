@@ -104,9 +104,9 @@
       effect1.uniforms['scale'].value = 4;
       composer.addPass(effect1);
 
-      const effect2 = new ShaderPass(RGBShiftShader);
-      effect2.uniforms['amount'].value = 0.0001;
-      composer.addPass(effect2);
+      // const effect2 = new ShaderPass(RGBShiftShader);
+      // effect2.uniforms['amount'].value = 0.0001;
+      // composer.addPass(effect2);
 
       // Resize Handling
       window.addEventListener('resize', onWindowResize);
@@ -171,14 +171,14 @@
 
         <!-- Project Card -->
         <div>
-          <h2 class="text-xl font-semibold">Ships in space</h2>
+          <h2 class="text-xl font-semibold underline hover:decoration-2">Ships in space &#x2197</h2>
           <p class="mt-2 text-gray-400">
             This was a project written in C++, utilising the SFML (link) framework, and was a recreation of the classic game Space Invaders, with custom implementations for dynamic animations, UI elements and VFX.
           </p>
         </div>
         <div class="flex gap-2 mt-2">
           <span class="bg-gray-800 text-gray-300 text-sm font-semibold px-3 py-1 rounded-full border-white/50 border-2">
-            C++ (C++17)
+            C++
           </span>
           <span class="bg-gray-800 text-gray-300 text-sm font-semibold px-3 py-1 rounded-full border-white/50 border-2">
             SFML
