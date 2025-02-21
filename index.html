@@ -169,31 +169,60 @@
       <!-- Right Column: Project Details -->
       <div class="col-span-1 space-y-6">
 
-        <!-- Project Card -->
-        <div>
-          <h2 class="text-xl font-semibold underline hover:decoration-2">Ships in space &#x2197</h2>
-          <p class="mt-2 text-gray-400">
-            This was a project written in C++, utilising the SFML (link) framework, and was a recreation of the classic game Space Invaders, with custom implementations for dynamic animations, UI elements and VFX.
-          </p>
+        <div class="flex items-start gap-4">
+          <!-- Video Thumbnail -->
+          <video class="w-48 h-36 rounded-lg  border-2 border-gray-700"
+            src="thumbnails/demo.mov"
+            muted
+            loop
+            playsinline
+            onmouseenter="this.play()"
+            onmouseleave="this.pause(); this.currentTime=0;">
+          </video>
+        
+          <!-- Project Details -->
+          <div>
+            <h2 class="text-xl font-semibold underline hover:decoration-2">Ships in Space &#x2197</h2>
+            <p class="mt-2 text-gray-400">
+              Ships in Space is a project I developed entirely in C++, utilizing the SFML framework. It recreates Space Invaders with custom animations, UI, and VFX.
+            </p>
+            <div class="flex gap-2 mt-2 pt-1">
+              <span class="bg-gray-800 text-gray-300 text-sm font-semibold px-3 py-1 rounded-full border-white/50 border-2">
+                C++
+              </span>
+              <span class="bg-gray-800 text-gray-300 text-sm font-semibold px-3 py-1 rounded-full border-white/50 border-2">
+                SFML
+              </span>
+              <span class="bg-gray-800 text-gray-300 text-sm font-semibold px-3 py-1 rounded-full border-white/50 border-2">
+                Git
+              </span>
+            </div>
+          </div>
         </div>
-        <div class="flex gap-2 mt-2">
+        
+        
+
+
+        <div>
+          <h2 class="text-xl font-semibold">Networked Multiplayer Pong</h2>
+          <p class="mt-2 text-gray-400">
+            To better understand networking and internet protocols, I decided to recreate the classic game 'Pong' using the Godot engine, but extended it to have online multiplayer functionality.
+            Through this project I gained an understanding of the different methods client-states can be synchronised remotely, and chose to implement clientside prediction with rollback functionality.
+          </p>
+        <div class="flex gap-2 mt-2 pt-1">
+          <span class="bg-gray-800 text-gray-300 text-sm font-semibold px-3 py-1 rounded-full border-white/50 border-2">
+            Godot
+          </span>
+          <span class="bg-gray-800 text-gray-300 text-sm font-semibold px-3 py-1 rounded-full border-white/50 border-2">
+            GDScript
+          </span>
           <span class="bg-gray-800 text-gray-300 text-sm font-semibold px-3 py-1 rounded-full border-white/50 border-2">
             C++
           </span>
-          <span class="bg-gray-800 text-gray-300 text-sm font-semibold px-3 py-1 rounded-full border-white/50 border-2">
-            SFML
-          </span>
-          <span class="bg-gray-800 text-gray-300 text-sm font-semibold px-3 py-1 rounded-full border-white/50 border-2">
-            Git
-          </span>
         </div>
+      </div>
 
-        <div>
-          <h2 class="text-xl font-semibold">Reflect</h2>
-          <p class="mt-2 text-gray-400">
-            Using a daily notes system instead of trying to keep things organized by topics has been super powerful for me. And with Reflect, it’s still easy for me to keep all of that stuff discoverable by topic even though all of my writing happens in the daily note.
-          </p>
-        </div>
+
 
         <div>
           <h2 class="text-xl font-semibold">SavvyCal</h2>
