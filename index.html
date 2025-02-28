@@ -12,7 +12,7 @@
 <body class="bg-gray-950 text-gray-200 font-sans">
   <!-- Three.js Container -->
   <div id="threejs-container" class="w-full h-[400px] relative overflow-hidden">
-    
+
   </div>
   <div class="grid grid-cols-[1px_auto_1fr] gap-6 items-center max-w-5xl mx-auto pt-10 pb-6">
     <!-- Left Column: Empty Placeholder (to match the layout) -->
@@ -61,7 +61,7 @@
 
       // Create Scene & Camera
       camera = new THREE.PerspectiveCamera(70, container.clientWidth / container.clientHeight, 1, 10000);
-      camera.position.z = 400;
+      camera.position.z = 600;
 
       const scene = new THREE.Scene();
       scene.fog = new THREE.Fog(0x000000, 1, 1000);
@@ -84,7 +84,7 @@
       // Background stars
       for (let i = 0; i < 100; i++) {
         const mesh = new THREE.Mesh(geometry, material);
-        mesh.position.set(1000*(Math.random() - 0.5), 1000*(Math.random() - 0.5), 1000*(Math.random() - 0.5)).normalize();
+        mesh.position.set(1000 * (Math.random() - 0.5), 1000 * (Math.random() - 0.5), 1000 * (Math.random() - 0.5)).normalize();
         mesh.position.multiplyScalar(Math.random() * 400);
         mesh.rotation.set(Math.random() * 2, Math.random() * 2, Math.random() * 2);
         mesh.scale.setScalar(Math.random() * 50);
@@ -131,7 +131,7 @@
   </script>
 
   <!-- Header Section -->
-  
+
 
   <section class="max-w-5xl mx-auto py-10 px-6">
     <!-- Main Grid Layout -->
@@ -141,7 +141,7 @@
 
       <!-- Left Column: Title -->
       <div class="col-span-1 flex flex-col items-start" style="white-space: pre;">
-        <h1 class="text-3xl font-bold">About</h1>
+        <h1 class="text-3xl font-bold">About    </h1>
       </div>
 
       <!-- Right Column: Project Details -->
@@ -149,7 +149,9 @@
         <!-- Project Card -->
         <div>
           <p class="mt-2 text-xl text-gray-400">
-            I believe in keeping it simple. <br><br> I'm focused on getting the job done effectively. I'm a software engineer that wants to make a difference in the world, with a focus on effective, accessible and efficient solutions. I've got experience working across both front and back-end services.
+            I believe in simplicity—whether in code, design, or problem-solving. I enjoy learning new technologies and tackling creative challenges with an efficient, pragmatic approach. <br><br>
+As a software engineer, my focus is on building effective, accessible, and high-performance solutions. I have experience across both frontend and backend development, and I'm always looking for ways to optimize and refine my work. <br><br>
+Beyond software, I'm deeply interested in game development, particularly in VFX and real-time rendering. I’m passionate about creating visually compelling experiences, and I love exploring new techniques to push technical and artistic boundaries.
           </p>
         </div>
       </div>
@@ -168,76 +170,104 @@
       </div>
 
       <!-- Right Column: Project Details -->
-      <div class="col-span-1 space-y-6">
+      <div class="col-span-1 space-y-8">
 
         <div class="flex items-start gap-4">
           <!-- Video Thumbnail -->
-          <video class="w-48 h-36 rounded-lg  border-2 border-gray-700"
-            src="thumbnails/demo.mov"
-            muted
-            loop
-            playsinline
-            onmouseenter="this.play()"
-            onmouseleave="this.pause(); this.currentTime=0;">
+          <video class="w-48 h-36 rounded-lg  border-2 border-gray-700" src="thumbnails/demo.mov" muted loop playsinline
+            onmouseenter="this.play()" onmouseleave="this.pause(); this.currentTime=0;">
           </video>
-        
+
           <!-- Project Details -->
           <div>
-            <h2 class="text-xl font-semibold underline hover:decoration-2">Ships in Space &#x2197</h2>
+            <a href="https://github.com/VertexEnthusiast/ships-in-space" target="_blank" rel="noopener"  class="text-xl font-semibold underline decoration-0 hover:decoration-2">Ships in Space &#x2197</a>
             <p class="mt-2 text-gray-400">
-              Ships in Space is a project I developed entirely in C++, utilizing the SFML framework. It recreates Space Invaders with custom animations, UI, and VFX.
+              Ships in Space is a project I developed entirely in C++, utilising the SFML framework. It recreates Space
+              Invaders with custom animations, UI, and VFX.
             </p>
             <div class="flex gap-2 mt-2 pt-1">
-              <span class="bg-gray-800 text-gray-300 text-sm font-semibold px-3 py-1 rounded-full border-white/50 border-2">
+              <span
+                class="bg-gray-800 text-gray-300 text-sm font-semibold px-3 py-1 rounded-full border-white/50 border-2">
                 C++
               </span>
-              <span class="bg-gray-800 text-gray-300 text-sm font-semibold px-3 py-1 rounded-full border-white/50 border-2">
+              <span
+                class="bg-gray-800 text-gray-300 text-sm font-semibold px-3 py-1 rounded-full border-white/50 border-2">
                 SFML
               </span>
-              <span class="bg-gray-800 text-gray-300 text-sm font-semibold px-3 py-1 rounded-full border-white/50 border-2">
+              <span
+                class="bg-gray-800 text-gray-300 text-sm font-semibold px-3 py-1 rounded-full border-white/50 border-2">
                 Git
               </span>
             </div>
           </div>
         </div>
-        
-        
+
+
 
 
         <div>
           <h2 class="text-xl font-semibold">Networked Multiplayer Pong</h2>
           <p class="mt-2 text-gray-400">
-            To better understand networking and internet protocols, I decided to recreate the classic game 'Pong' using the Godot engine, but extended it to have online multiplayer functionality.
-            Through this project I gained an understanding of the different methods client-states can be synchronised remotely, and chose to implement clientside prediction with rollback functionality.
+            To better understand networking and internet protocols, I decided to recreate the classic game 'Pong' using
+            the Godot engine, but extended it to have online multiplayer functionality.
+            Through this project I gained an understanding of the different methods client-states can be synchronised
+            remotely, and chose to implement clientside prediction with rollback functionality.
           </p>
-        <div class="flex gap-2 mt-2 pt-1">
-          <span class="bg-gray-800 text-gray-300 text-sm font-semibold px-3 py-1 rounded-full border-white/50 border-2">
-            Godot
-          </span>
-          <span class="bg-gray-800 text-gray-300 text-sm font-semibold px-3 py-1 rounded-full border-white/50 border-2">
-            GDScript
-          </span>
-          <span class="bg-gray-800 text-gray-300 text-sm font-semibold px-3 py-1 rounded-full border-white/50 border-2">
-            C++
-          </span>
-        </div>
-      </div>
-
-
-
-        <div>
-          <h2 class="text-xl font-semibold">SavvyCal</h2>
-          <p class="mt-2 text-gray-400">
-            Great tool for scheduling meetings while protecting my calendar and making sure I still have lots of time for deep work during the week.
-          </p>
+          <div class="flex gap-2 mt-2 pt-1">
+            <span
+              class="bg-gray-800 text-gray-300 text-sm font-semibold px-3 py-1 rounded-full border-white/50 border-2">
+              Godot
+            </span>
+            <span
+              class="bg-gray-800 text-gray-300 text-sm font-semibold px-3 py-1 rounded-full border-white/50 border-2">
+              GDScript
+            </span>
+            <span
+              class="bg-gray-800 text-gray-300 text-sm font-semibold px-3 py-1 rounded-full border-white/50 border-2">
+              C++
+            </span>
+          </div>
         </div>
 
-        <div>
-          <h2 class="text-xl font-semibold">Focus</h2>
-          <p class="mt-2 text-gray-400">
-            Simple tool for blocking distracting websites when I need to just do the work and get some momentum going.
-          </p>
+
+
+        <div class="flex items-start gap-4">
+          <!-- Screenshot Thumbnail -->
+          <img class="w-48 h-32 rounded-lg border-2 border-gray-700 "
+            src="thumbnails/sds_screenshot.png" alt="Seven Deadly Spins Screenshot">
+            
+
+          <!-- Project Details -->
+          <div>
+            <a href="https://herbertiser.itch.io/seven-deadly-spins" target="_blank" rel="noopener" class="text-xl font-semibold underline decoration-0 hover:decoration-2">Seven Deadly Spins &#x2197</a>
+            <p class="mt-2 text-gray-400">
+              Seven Deadly Spins is a bullet-hell roguelite game developed in C#, utilising the Unity Engine. It
+              implements custom materials and shaders and was an exercise in architecting and managing a large software
+              project independently to produce a final and complete product.
+            </p>
+            <div class="flex gap-2 mt-2 pt-1">
+              <span
+                class="bg-gray-800 text-gray-300 text-sm font-semibold px-3 py-1 rounded-full border-white/50 border-2">
+                C#
+              </span>
+              <span
+                class="bg-gray-800 text-gray-300 text-sm font-semibold px-3 py-1 rounded-full border-white/50 border-2">
+                Unity
+              </span>
+              <span
+                class="bg-gray-800 text-gray-300 text-sm font-semibold px-3 py-1 rounded-full border-white/50 border-2">
+                URP
+              </span>
+              <span
+                class="bg-gray-800 text-gray-300 text-sm font-semibold px-3 py-1 rounded-full border-white/50 border-2">
+                Unity Version Control
+              </span>
+            </div>
+          </div>
         </div>
+
+
+
       </div>
     </div>
   </section>
